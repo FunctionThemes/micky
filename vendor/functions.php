@@ -34,19 +34,6 @@ if(!function_exists('micky_menu_editor')){
 		return $output;
 	}
 }
-/*********=============== Get Fixed Content ============*****************/
-if(!function_exists('micky_get_excerpt')){
-	function micky_get_excerpt($count){
-	  global $post;
-	  $permalink = get_permalink($post->ID);
-	  $excerpt = get_the_content();
-	  $excerpt = strip_tags($excerpt);
-	  $excerpt = substr($excerpt, 0, $count);
-	  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-	  $excerpt = $excerpt.'... ';
-	  return $excerpt;
-	}
-}
 /*********=============== custom comment ============*****************/
 function micky_custom_comments($comment, $args, $depth){
 	$GLOBALS['comment'] = $comment;
@@ -88,31 +75,13 @@ function micky_custom_comments($comment, $args, $depth){
 	<?php
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************* global variables function ****************************/
+/********************* start global variables function ****************************/
 function micky_post_variables(){
 	global $post;
 	return $post;
 }  
-/******************** global variables function *******************************/
+/******************** end global variables function *******************************/
 /*********************** Require File Start **********************************/
-require_once get_template_directory() . '/vendor/include/micky-resizer.php';
 require_once get_template_directory() . '/vendor/include/micky-enqueue.php';
-
 /************************* Require File End ************************************/
 ?>

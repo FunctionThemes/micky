@@ -6,28 +6,24 @@
  *
  * @package micky
  */
-if ( function_exists( 'fw_get_db_settings_option' )){	
-$micky_data = fw_get_db_settings_option(); 
+$theme_sidebar_position = $thumb = $attachment_url = $thumb_w = $thumb_h = $image = $sidebar_layout = '';
+$sidebar_layout = get_theme_mod('sidebar_layout');
+if(isset($sidebar_layout) && !empty($sidebar_layout)){
+	$theme_sidebar_position = get_theme_mod('sidebar_layout');
 }
-$theme_sidebar_position = $thumb = $attachment_url = $thumb_w = $thumb_h = $image = '';
-if(isset($micky_data['theme_sidebar']) && !empty($micky_data['theme_sidebar'])){
-	$theme_sidebar_position = $micky_data['theme_sidebar'];
+if(empty($sidebar_layout)){
+$theme_sidebar_position = 'right';
 }
+
 $thumb = get_post_thumbnail_id($post->ID);
 $attachment_url = wp_get_attachment_url($thumb, 'full');
 if(is_single()){ 
-	$thumb_w ='750';
-	$thumb_h ='575';
-	$image = micky_resize($attachment_url, $thumb_w, $thumb_h, true);
+	 $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'micky-blog-single' )[0];
 }else{
 	if($theme_sidebar_position == 'full'){
-		$thumb_w ='1140';
-		$thumb_h ='350';
-		$image = micky_resize($attachment_url, $thumb_w, $thumb_h, true);
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )[0];
 	}else{
-		$thumb_w ='750';
-		$thumb_h ='350';
-		$image = micky_resize($attachment_url, $thumb_w, $thumb_h, true);
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'micky-blog-small' )[0];
 	}
 }
 ?>
@@ -66,7 +62,7 @@ if(is_single()){
 		</span>
 	</div>
 	<div class="blog_content">
-		<p><?php echo micky_get_excerpt(200); ?></p>
+		<p><?php the_excerpt(); ?></p>
 	</div>
 </div>
 <?php } ?>

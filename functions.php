@@ -42,6 +42,9 @@ function micky_setup() {
 	 */
 	if ( function_exists( 'add_theme_support' )){	
 		add_theme_support('post-thumbnails',array('post')); 
+		add_image_size( 'micky-blog-single', 750, 575 );
+		add_image_size( 'micky-blog-full', 1140, 350 );
+		add_image_size( 'micky-blog-small', 750, 350 );
 	}
 
 	// This theme uses wp_nav_menu() in one location.
@@ -135,9 +138,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /************************ start Micky Require File ************************/
-
-
 require_once get_template_directory().'/vendor/functions.php';
-
-/************************ closeMicky Require File ************************/
+/************************ close Micky Require File ************************/
 ?>

@@ -73,24 +73,8 @@ if ( post_password_required() ) {
 	?>
 	<div class="blog_comments_form">
 	<?php
-    $micky_commenter = wp_get_current_commenter();
-	$micky_aria_req = ( $req ? " aria-required='true'" : '' );
-	$micky_fields =  array(
-		'author' => '<div class="col-sm-6"><input type="text" name="author" placeholder="'.esc_html__('Name...','micky').'" value="' . esc_attr( $micky_commenter['comment_author'] ).'" ' . $micky_aria_req .' class="form-control" id="nm"/></div>',
-		'email'  => '<div class="col-sm-6"><input type="text"  name="email" placeholder="'.esc_html__('Email...','micky').'" value="' . esc_attr( $micky_commenter['comment_author_email'] ).'" ' . $micky_aria_req .' class="form-control" id="em"/></div>',
-	);
-	$micky_comments_args = array(
-	'fields' =>  $micky_fields,
-	'id_form' => 'form-horizontal',
-	'comment_field' => '<div class="col-lg-12"><textarea name="comment" rows="3" placeholder="'.esc_html__('Message...','micky').'" class="comment_textarea"></textarea></div>',
-	'comment_notes_before'=>'',
-	'comment_notes_after'=>'',
-	'id_submit'=>'submit',
-	'title_reply'=>'',  
-	'label_submit'=> esc_html__('Send Comment','micky'),
-	'class_submit'=> 'blog_submit',
-	);
-	comment_form($micky_comments_args);
+	
+	comment_form();
 	?>
 	</div>
 </div><!-- #comments -->

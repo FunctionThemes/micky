@@ -2899,6 +2899,25 @@
 		color: #ffffff;
 		border-color: #f39c12;
 	}
+	.navigation.pagination .nav-links a, 
+	.navigation.pagination .nav-links span {
+		border-radius: 0;
+		background-color: transparent;
+		color: #525252;
+		border: 1px solid #f39c12;
+		margin-right: 7px;
+		text-decoration: none;
+		padding: 6px 12px;
+		display: inline-block;
+	 cursor:pointer;
+	}
+
+	.navigation.pagination .nav-links span, 
+	.navigation.pagination .nav-links a:hover {
+		background-color: #f39c12;
+		color: #ffffff;
+		border-color: #f39c12;
+	}
 	.blog_content ul {
 		margin: 0;
 	}

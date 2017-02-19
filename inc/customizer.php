@@ -166,7 +166,7 @@ function micky_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'footer_copyright',
         array(
-            'default' => 'Copyright 2016 by Micky',
+            'default' => 'Copyright 2017 by Your Company',
             'sanitize_callback' => 'sanitize_text_field',
         )
     );
@@ -191,7 +191,7 @@ function micky_customize_register( $wp_customize ) {
         'sidebar_layout',
         array(
             'default'           => 'right',
-            'sanitize_callback' => 'micky_sanitize_choices_field',
+            'sanitize_callback' => 'micky_sanitize_layout',
         )
     );
     $wp_customize->add_control(
@@ -213,7 +213,7 @@ function micky_customize_register( $wp_customize ) {
         'page_sidebar_layout',
         array(
             'default'           => 'right',
-            'sanitize_callback' => 'micky_sanitize_choices_field',
+            'sanitize_callback' => 'micky_sanitize_layout',
         )
     );
     $wp_customize->add_control(
@@ -242,6 +242,9 @@ function micky_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'micky_customize_preview_js' );
 
-function micky_sanitize_choices_field( $input ) {
-	return $input;
+function micky_sanitize_layout( $value ) {
+    if ( ! in_array( $value, array( 'full', 'left', 'right' ) ) )
+        $value = 'right';
+ 
+    return $value;
 }

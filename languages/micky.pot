@@ -12,95 +12,165 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: 404.php:17
+#: 404.php:63
 #@ _s
-msgid "Oops! That page can&rsquo;t be found."
+msgid "Go to"
 msgstr ""
 
-#: 404.php:21
+#: 404.php:64
 #@ _s
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid "home"
 msgstr ""
 
-#: 404.php:33
+#: archive.php:25
 #@ _s
-msgid "Most Used Categories"
+msgid "Archives"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:51
-#, php-format
+#: comments.php:24
 #@ _s
-msgid "Try looking in the monthly archives. %1$s"
+msgid "LEAVE A COMMENT"
 msgstr ""
 
-#: comments.php:31
-#, php-format
+#: comments.php:26
 #@ _s
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:40
-#: comments.php:61
-#@ _s
-msgid "Comment navigation"
+msgid "0 comment"
 msgstr ""
 
-#: comments.php:43
-#: comments.php:64
+#: comments.php:26
+#@ _s
+msgid "1 comment"
+msgstr ""
+
+#: comments.php:26
+#@ _s
+msgid "% comments"
+msgstr ""
+
+#: comments.php:37
 #@ _s
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:44
-#: comments.php:65
+#: comments.php:38
 #@ _s
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:78
+#: comments.php:56
+#@ _s
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:57
+#@ _s
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:70
 #@ _s
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18
+#: comments.php:80
 #@ _s
-msgid "https://wordpress.org/"
+msgid "Message..."
 msgstr ""
 
-#: footer.php:18
-#, php-format
+#: comments.php:84
 #@ _s
-msgid "Proudly powered by %s"
+msgid "Send Comment"
 msgstr ""
 
-#: footer.php:20
-#, php-format
+#: comments.php:93
 #@ _s
-msgid "Theme: %1$s by %2$s."
+msgid "Name..."
 msgstr ""
 
-#: functions.php:47
+#: comments.php:95
 #@ _s
-msgid "Primary"
+msgid "Email..."
 msgstr ""
 
-#: functions.php:102
+#: functions.php:49
+#@ _s
+msgid "Micky Header Menu"
+msgstr ""
+
+#: functions.php:106
 #@ _s
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:25
+#: functions.php:108
 #@ _s
-msgid "Skip to content"
+msgid "Add widgets here."
 msgstr ""
 
-#: header.php:45
+#: index.php:30
 #@ _s
-msgid "Primary Menu"
+msgid "Blog"
+msgstr ""
+
+#: index.php:58
+#@ _s
+msgid "PREVIOUS"
+msgstr ""
+
+#: index.php:59
+#@ _s
+msgid "NEXT"
+msgstr ""
+
+#: search.php:25
+#@ _s
+msgid "Search"
+msgstr ""
+
+#: search.php:47
+#@ _s
+msgid "Search Results for: %s"
+msgstr ""
+
+#: vendor/functions.php:17
+#@ _s
+msgid "Add a menu"
+msgstr ""
+
+#: vendor/functions.php:66
+#@ _s
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: template-parts/content-none.php:12
+#@ _s
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:17
+#, php-format
+#@ _s
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:19
+#@ _s
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:23
+#@ _s
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:14
+#@ _s
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:23
+#@ _s
+msgid "Edit %s"
 msgstr ""
 
 #: inc/template-tags.php:28
@@ -138,87 +208,10 @@ msgstr ""
 
 #: inc/template-tags.php:64
 #@ _s
-msgid "Leave a comment"
+msgid "Leave a Comment<span class="screen-reader-text"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:64
-#@ _s
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-#@ _s
-msgid "% Comments"
-msgstr ""
-
-#. translators: %s: Name of current post
 #: inc/template-tags.php:71
-#: template-parts/content-page.php:33
-#, php-format
 #@ _s
 msgid "Edit %s"
-msgstr ""
-
-#: search.php:19
-#, php-format
-#@ _s
-msgid "Search Results for: %s"
-msgstr ""
-
-#: template-parts/content-none.php:14
-#@ _s
-msgid "Nothing Found"
-msgstr ""
-
-#: template-parts/content-none.php:21
-#, php-format
-#@ _s
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: template-parts/content-none.php:25
-#@ _s
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
-
-#: template-parts/content-none.php:31
-#@ _s
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:22
-#: template-parts/content.php:38
-#@ _s
-msgid "Pages:"
-msgstr ""
-
-#. translators: %s: Name of current post. 
-#: template-parts/content.php:33
-#, php-format
-#@ _s
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-#@ _s
-msgid "http://underscores.me/"
-msgstr ""
-
-#. Description of the plugin/theme
-#@ _s
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
-msgstr ""
-
-#. Author of the plugin/theme
-#@ _s
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-#@ _s
-msgid "http://automattic.com/"
 msgstr ""

@@ -36,7 +36,7 @@ if(isset($micky_footer_logo_height) && !empty($micky_footer_logo_height)){
 if(isset($micky_footer_copyright) && !empty($micky_footer_copyright)){
 	$footer_copyrigth = get_theme_mod('footer_copyright');
 }else{
-	$footer_copyrigth = 'Copyright &copy; 2016 by Micky';
+	$footer_copyrigth = 'Copyright &copy; 2017 by Your Company';
 }
 ?>
 <footer>
@@ -44,7 +44,13 @@ if(isset($micky_footer_copyright) && !empty($micky_footer_copyright)){
    <div class="container">
     <div class="row">
      <div class="col-lg-3 col-md-3 col-sm-3">
-      <div class="footer_logo"> <a href="<?php echo esc_url( home_url( '/' )); ?>"> <img src="<?php echo esc_url($footer_logo_image); ?>" alt="mk_logo" style="width:<?php echo esc_attr($footer_logo_width); ?>px; height: <?php echo esc_attr($footer_logo_height); ?>px;"> </a> </div>
+      <div class="footer_logo"> 
+	  <?php if(!empty($micky_footer_logo)){ ?>
+	  <a href="<?php echo esc_url( home_url( '/' )); ?>"> <img src="<?php echo esc_url($footer_logo_image); ?>" alt="mk_logo" style="width:<?php echo esc_attr($footer_logo_width); ?>px; height: <?php echo esc_attr($footer_logo_height); ?>px;"> </a>
+	  <?php }else{ ?>
+		   <h1 style="color: #fff;"><?php echo get_bloginfo('name'); ?></h1>
+       <?php } ?>
+	  </div>
      </div>
      <div class="col-lg-6 col-md-6 col-sm-6">
       <p class="footer_copyright"><?php echo esc_html($footer_copyrigth); ?></p>

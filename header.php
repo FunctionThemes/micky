@@ -50,8 +50,12 @@ if(isset($micky_logo_height) && !empty($micky_logo_height)){
      <div class="full_width header_navigation">
       <div class="col-sm-3">
 	   <div class="mk_logo zoomIn wow">
+	   <?php if(!empty($micky_main_logo)){ ?>
 		   <a href="<?php echo esc_url( home_url( '/' )); ?>"><img src="<?php echo esc_url($main_logo); ?>" alt="mk_logo" style="width:<?php echo esc_attr($logo_width); ?>px; height: <?php echo esc_attr($logo_height); ?>px;">
 		   </a>
+	   <?php }else{ ?>
+		   <h1><?php echo get_bloginfo('name'); ?></h1>
+       <?php } ?>
 	   </div>
 	  </div>
       <div class="col-sm-9">   
